@@ -8,11 +8,9 @@ function formatDate(dateStr) {
   return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-const ENDPOINT = `${API_BASE}/api/activities/`;
+const ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`
+  : 'http://localhost:8000/api/activities/';
 
 function Activities() {
   const [activities, setActivities] = useState([]);

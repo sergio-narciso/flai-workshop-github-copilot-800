@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-const ENDPOINT = `${API_BASE}/api/teams/`;
+const ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+  : 'http://localhost:8000/api/teams/';
 
 const FITNESS_BADGE = { god: 'bg-purple', elite: 'bg-primary', advanced: 'bg-success', beginner: 'bg-secondary' };
 function fitnessBadge(level) { return FITNESS_BADGE[level] || 'bg-secondary'; }

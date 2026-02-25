@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-const USERS_ENDPOINT = `${API_BASE}/api/users/`;
-const TEAMS_ENDPOINT = `${API_BASE}/api/teams/`;
+const USERS_ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`
+  : 'http://localhost:8000/api/users/';
+const TEAMS_ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+  : 'http://localhost:8000/api/teams/';
 
 const FITNESS_LEVELS = ['beginner', 'advanced', 'elite', 'god'];
 const FITNESS_BADGE = { god: 'bg-purple', elite: 'bg-primary', advanced: 'bg-success', beginner: 'bg-secondary' };

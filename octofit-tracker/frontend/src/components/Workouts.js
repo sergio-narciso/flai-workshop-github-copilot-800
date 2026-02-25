@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-const ENDPOINT = `${API_BASE}/api/workouts/`;
+const ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/workouts/`
+  : 'http://localhost:8000/api/workouts/';
 
 const CARD_ACCENTS = ['bg-primary', 'bg-success', 'bg-info', 'bg-warning', 'bg-danger', 'bg-secondary'];
 

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = process.env.REACT_APP_CODESPACE_NAME
-  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000';
-
-const ENDPOINT = `${API_BASE}/api/leaderboard/`;
+const ENDPOINT = process.env.REACT_APP_CODESPACE_NAME
+  ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/`
+  : 'http://localhost:8000/api/leaderboard/';
 
 function rankStyle(rank) {
   if (rank === 1) return { background: '#ffd700', color: '#333' };
