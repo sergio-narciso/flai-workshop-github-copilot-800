@@ -3,6 +3,7 @@ from django.db import models
 
 class OctofitUser(models.Model):
     name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100, unique=True, default='')
     email = models.EmailField(unique=True)
     age = models.IntegerField(default=0)
     fitness_level = models.CharField(max_length=50, default='beginner')

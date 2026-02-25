@@ -17,17 +17,17 @@ class Command(BaseCommand):
         self.stdout.write('Creating superhero users...')
         users_data = [
             # Marvel heroes
-            {'name': 'Tony Stark', 'email': 'ironman@marvel.com', 'age': 42, 'fitness_level': 'elite'},
-            {'name': 'Steve Rogers', 'email': 'cap@marvel.com', 'age': 105, 'fitness_level': 'elite'},
-            {'name': 'Thor Odinson', 'email': 'thor@marvel.com', 'age': 1500, 'fitness_level': 'god'},
-            {'name': 'Natasha Romanoff', 'email': 'blackwidow@marvel.com', 'age': 38, 'fitness_level': 'elite'},
-            {'name': 'Peter Parker', 'email': 'spiderman@marvel.com', 'age': 18, 'fitness_level': 'advanced'},
+            {'name': 'Tony Stark',        'username': 'ironman',     'email': 'ironman@marvel.com',    'age': 42,   'fitness_level': 'elite'},
+            {'name': 'Steve Rogers',      'username': 'cap_america', 'email': 'cap@marvel.com',        'age': 105,  'fitness_level': 'elite'},
+            {'name': 'Thor Odinson',      'username': 'thor',        'email': 'thor@marvel.com',       'age': 1500, 'fitness_level': 'god'},
+            {'name': 'Natasha Romanoff',  'username': 'blackwidow',  'email': 'blackwidow@marvel.com', 'age': 38,   'fitness_level': 'elite'},
+            {'name': 'Peter Parker',      'username': 'spiderman',   'email': 'spiderman@marvel.com',  'age': 18,   'fitness_level': 'advanced'},
             # DC heroes
-            {'name': 'Bruce Wayne', 'email': 'batman@dc.com', 'age': 40, 'fitness_level': 'elite'},
-            {'name': 'Clark Kent', 'email': 'superman@dc.com', 'age': 35, 'fitness_level': 'god'},
-            {'name': 'Diana Prince', 'email': 'wonderwoman@dc.com', 'age': 5000, 'fitness_level': 'god'},
-            {'name': 'Barry Allen', 'email': 'flash@dc.com', 'age': 28, 'fitness_level': 'elite'},
-            {'name': 'Hal Jordan', 'email': 'greenlantern@dc.com', 'age': 32, 'fitness_level': 'advanced'},
+            {'name': 'Bruce Wayne',       'username': 'batman',       'email': 'batman@dc.com',         'age': 40,   'fitness_level': 'elite'},
+            {'name': 'Clark Kent',        'username': 'superman',     'email': 'superman@dc.com',       'age': 35,   'fitness_level': 'god'},
+            {'name': 'Diana Prince',      'username': 'wonderwoman',  'email': 'wonderwoman@dc.com',    'age': 5000, 'fitness_level': 'god'},
+            {'name': 'Barry Allen',       'username': 'flash',        'email': 'flash@dc.com',          'age': 28,   'fitness_level': 'elite'},
+            {'name': 'Hal Jordan',        'username': 'greenlantern', 'email': 'greenlantern@dc.com',   'age': 32,   'fitness_level': 'advanced'},
         ]
         users = {}
         for ud in users_data:
